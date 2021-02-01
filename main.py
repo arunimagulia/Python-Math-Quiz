@@ -6,8 +6,8 @@ Copyright : 2021, All Rights Reserved
 Description: Main class where the quiz is started and played
 """
 import argparse
-import TitleAndMainMenu
-import QuestionsAndAnswers
+import Menu
+import Questions
 import Utilities
 
 #Main method used to run the game
@@ -19,13 +19,13 @@ def main():
     if args.output:
         print("This is the start of the math quiz. Good Luck!")
 
-    menu = TitleAndMainMenu.Titles()
+    menu = Menu.Titles()
     menu.intro()
 
     IO = Utilities.Operations()
     IO.separator()
 
-    qans = QuestionsAndAnswers.Responses()
+    qans = Questions.Responses()
 
     option = IO.userInput()
     if option != 0:
